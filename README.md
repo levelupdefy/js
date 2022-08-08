@@ -10,6 +10,20 @@
 
 > 4. [js strings](#4)
 
+> 5. [js numbers](./new.md)
+
+> 6. [js array](./new.md)
+
+> 7. [js dates](./new.md)
+
+> 8. [js math and random](./new.md)
+
+> 9. [js boolean](./new.md)
+
+> 10. [js comparison](./new.md)
+
+> 11. [conditional statements](#11)
+
 
 
 
@@ -114,14 +128,14 @@ console.log(me, github, meta);
 ```
 
 
-|              |                      |
-|--------------|----------------------|
-|     \b       |  backspace           |
-|     \f       |  from feed           |
-|     \n       |  new line            |
-|     \r	   | carriage return      |
-|     \t       | horizontal tabulator |
-|     \v	   | vertical tabulator   |
+|     |                      |
+| --- | -------------------- |
+| \b  | backspace            |
+| \f  | from feed            |
+| \n  | new line             |
+| \r  | carriage return      |
+| \t  | horizontal tabulator |
+| \v  | vertical tabulator   |
 
 ```js
 console.log("we're taking \n over!");
@@ -192,3 +206,64 @@ const f = g[5];
 console.log(f);
 ```
 [[code]](./js/f4/node4.2.js)
+
+------------------------------------------
+# 11
+## conditional statements
+```js
+
+// if statement
+/*
+
+   if (condition) {
+      block of code to be executed if the condition is true
+    }
+*/
+
+const hour = new Date().getHours();
+if (hour < 12) {
+    const msg = "good morning!";
+    console.log(msg);
+}
+
+// if & else
+const color = "blue";
+const msg = "color is";
+if (color == "red") {
+    console.log(msg, color);
+}
+else {
+    console.log(msg, "not red!");
+}
+
+// if, else if & else 
+// !in my opinion, instead of {if, else if & else} use {if, if, if, and if only}
+
+const a = 22;
+if (a < 10) {
+    console.log("a", "< 10");
+}
+if (10 <= a < 10) {
+    if (a == 10) {
+        const sing = "=";
+        console.log(10, sing, "a", "< 20");
+
+    }
+    if (a > 10) {
+        const sing = "<";
+        console.log(10, sing, "a", "< 20");
+    }
+
+}
+if (a >= 20) {
+    if (a == 20) {
+        const sing = "=";
+        console.log("a", sing, 20);
+    }
+    if (a > 20) {
+        const sing = ">";
+        console.log("a", sing, 20);
+    }
+}
+
+```
